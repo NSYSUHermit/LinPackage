@@ -2,16 +2,13 @@
 \alias{MAplot}
 \title{Moving Average plot}
 \usage{
-MAplot()
+MAplot(date,price,num_ma)
 }
 \description{
 Calculate the moving average of data, then plot the data and line.
 }
-\examples{
-MAplot(date,price,num_ma)
-}
 \arguments{
   \item{date}{the date of price}
-  \item{price}{Daily price}
+  \item{price}{daily price}
   \item{num_ma}{the time you want to build}
 }
