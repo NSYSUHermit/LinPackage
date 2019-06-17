@@ -14,13 +14,14 @@ MCS <- function(initial, mean, sd, steps = 2, paths = 5, log = FALSE) {
 }
 
 #Plot The MA
-MAplot <- function(purvalue,date,num_ma){
-
-  data1 <- data.frame(purvalue,date)
+MAplot <- function(date,price,num_ma){
+  library(forecast)
+  library(ggplot2)
+  data1 <- data.frame(price,date)
   names(data1) <- c("price","date")
-  data1$MA <- forecast::ma(data1$price,order = num_ma)
+  data1$MA <- ma(data1$price,order = num_ma)
 
-  ggplot2::ggplot(data1,aes(x = date))+
+  ggplot(data1,aes(x = date))+
     geom_line(aes(y = price, colour = 'Price'),size = 1.2)+
     geom_line(aes(y = MA, colour = 'MA'),size = 1.2)
 }

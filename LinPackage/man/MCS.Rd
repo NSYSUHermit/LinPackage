@@ -2,7 +2,7 @@
 \alias{MCS}
 \title{Monte Carlo Simulation}
 \usage{
-MCS()
+MCS(initial, mean, sd, steps = 2, paths = 5, log = FALSE)
 }
 \description{
 Applying Monte Carlo method to simulate the price paths.
@@ -17,4 +17,5 @@ MCS(initial = 30, mean = 0.004, sd = 0.005, steps = 20, paths = 20000)
   \item{sd}{volatility of return}
   \item{steps}{steps of each simulation}
   \item{paths}{number of simulations}
+  \item{log}{log the simulation data}
 }
